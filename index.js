@@ -14,7 +14,7 @@ app.get("/", (req , res)=>{
 })
 
 
-const uri = "mongodb+srv://rezaulislam5490:pJqxQdZdBmfj7Y1i@cluster0.hflxk.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+const uri = "mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.hflxk.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 
 const client = new MongoClient(uri, {
   serverApi: {
